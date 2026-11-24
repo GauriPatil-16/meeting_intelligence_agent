@@ -9,7 +9,11 @@ from groq import APIConnectionError
 from .agent import analyze_meeting
 from .database import create_table, save_meeting, get_meetings, update_action_item
 
-app = FastAPI(title="Meeting Intelligence Agent")
+app = FastAPI(
+    title="Meeting Intelligence Agent",
+    version="1.0.0",
+    description="AI-powered meeting analysis application"
+)
 
 # used to allow React to send requests to FastAPI.
 # used to allow the React frontend to communicate with FastAPI.
